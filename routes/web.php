@@ -15,12 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('jogos')->group(function () {
-    Route::get('/', [JogosController::class, 'index']);
-    Route::get('/create', [JogosController::class, 'create']);
+    Route::get('/', [JogosController::class, 'index'])->name('jogos.index');
+    Route::get('/create', [JogosController::class, 'create'])->name('jogos.create');
 });
-
-Route::fallback(function (){
-    return "Erro";
-});
-
 
