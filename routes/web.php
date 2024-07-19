@@ -22,3 +22,5 @@ Route::prefix('jogos')->group(function () {
 Route::fallback(function (){
     return "Erro";
 });
+
+
