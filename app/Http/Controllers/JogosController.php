@@ -6,6 +6,7 @@ use App\Models\Jogo;
 use Illuminate\Http\Request;
 use function dd;
 use function redirect;
+use function view;
 
 class JogosController extends Controller
 {
@@ -24,5 +25,31 @@ class JogosController extends Controller
     {
         Jogo::create($request->all());
         return redirect()->route('jogos-index');
+    }
+
+    public function edit($id)
+    {
+        $jogos = Jogo::where('id', $id)->first();
+        if(!empty($jogos)) {
+            return view('jogos.edit', ['jogos' => $jogos]);
+        } else {
+            return redirect()->route('jogos-index');
+        }
+    }
+
+    public function update(Request $request)
+    {
+        $jogos = Jogo::where('id', $request->id)->first();
+        if(!empty($jogos)) {
+            $jogos->update($request->all());
+            return redirect()->route('jogos-index');
+        } else {
+            return redirect()->route('jogos-index');
+        }
+    }
+
+    public function delete()
+    {
+        //
     }
 }
