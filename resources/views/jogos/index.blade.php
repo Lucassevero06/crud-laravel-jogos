@@ -4,21 +4,28 @@
 
 @section('content')
 
-    <h1>Listagem de Jogos</h1>
+    <div class="container mt-5">
 
-    <a href={{ redirect('create') }}>Crie um jogo</a>
+        <div class="row">
+            <div class="col-sm-10">
+                <h1>Listagem de Jogos</h1>
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-danger" href="{{ route('jogos-create') }}">Crie um jogo</a>
+            </div>
+        </div>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Categoria</th>
-            <th scope="col">Ano de Criação</th>
-            <th scope="col">Valor</th>
-        </tr>
-        </thead>
-        <tbody>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Ano de Criação</th>
+                <th scope="col">Valor</th>
+            </tr>
+            </thead>
+            <tbody>
 
             @foreach($jogos as $jogo)
                 <tr>
@@ -30,7 +37,8 @@
                 </tr>
             @endforeach
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 
 @endsection

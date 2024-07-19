@@ -17,8 +17,9 @@ class CreateJogosTable extends Migration
             $table->id()->autoIncrement();
             $table->string('nome', 55);
             $table->string('categoria', 55);
-            $table->string('ano_criacao');
+            $table->integer('ano_criacao')->nullable();
             $table->double('valor', 8, 2);
+            $table->timestamps();
         });
     }
 
