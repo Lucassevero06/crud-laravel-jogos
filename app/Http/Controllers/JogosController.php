@@ -48,8 +48,14 @@ class JogosController extends Controller
         }
     }
 
-    public function delete()
+    public function destroy(Request $request)
     {
-        //
+        $jogos = Jogo::where('id', $request->id)->first();
+        if(!empty($jogos)) {
+            $jogos->delete();
+            return redirect()->route('jogos-index');
+        } else {
+            return redirect()->route('jogos-index');
+        }
     }
 }
