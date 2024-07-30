@@ -28,7 +28,7 @@
                 <br>
                 <div class="form-group">
                     <label for="valor">Valor</label>
-                    <input value="{{ $jogos->valor }}" type="number" name="valor" id="valor" class="form-control">
+                    <input value="{{ $jogos->valor }}" type="number" name="valor" id="valor" class="form-control" step="0.01">
                 </div>
                 <br>
                 <div class="form-group">

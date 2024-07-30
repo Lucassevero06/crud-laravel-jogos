@@ -12,7 +12,7 @@
             <div class="form-group">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" class="form-control">
+                    <input type="text" name="nome" id="nome" class="bg-secundary form-control">
                 </div>
                 <br>
                 <div class="form-group">
@@ -27,7 +27,7 @@
                 <br>
                 <div class="form-group">
                     <label for="valor">Valor</label>
-                    <input type="number" name="valor" id="valor" class="form-control">
+                    <input type="number" name="valor" id="valor" class="form-control" step="0.01">
                 </div>
                 <br>
                 <div class="form-group">

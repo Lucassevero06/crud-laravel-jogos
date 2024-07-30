@@ -24,7 +24,7 @@ class JogosController extends Controller
     public function store(Request $request)
     {
         Jogo::create($request->all());
-        return redirect()->route('jogos-index');
+        return redirect()->route('jogos-index')->with('success', "Jogo criado com sucesso!");
     }
 
     public function edit($id)
