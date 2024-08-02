@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', '/jogos');
+Route::redirect('/', '/login');
+
+Route::get('/login', function () {
+   return view('login.form');
+});
 
 Route::prefix('jogos')->group(function () {
     Route::get('/', [JogosController::class, 'index'])->name('jogos-index');
