@@ -14,11 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::redirect('/', '/login');
-
-Route::get('/login', function () {
+Route::get('/', function () {
    return view('login.form');
+});
+
+Route::prefix('users')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('users-index');
 });
 
 Route::prefix('jogos')->group(function () {

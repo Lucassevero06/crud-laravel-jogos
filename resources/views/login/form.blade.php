@@ -15,7 +15,7 @@
             <form action="" method="post" class="shadow-lg p-3 mb-5 bg-body-tertiary rounded mx-auto w-100">
                 @csrf
                 <div class="row mb-3 w-100 mx-auto">
-                    <h1 class="text-center">Fala seu lindu</h1>
+                    <h1 class="text-center">Hello World</h1>
                 </div>
                 <div class="row mb-3 w-100 mx-auto">
                     <input placeholder="Lucas" type="text" class="form-control" id="nome">
